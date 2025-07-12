@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Przewodnik KWHotel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KWHotel – Przewodnik</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f6f8;
       margin: 0;
-      padding: 0;
+      background: #f4f6f8;
+      color: #333;
     }
     header {
       background-color: #2b4c7e;
-      color: white;
+      color: #fff;
       padding: 20px;
       text-align: center;
     }
     main {
-      max-width: 900px;
-      margin: auto;
+      max-width: 1000px;
+      margin: 0 auto;
       background: white;
       padding: 30px;
     }
@@ -36,7 +36,6 @@
     img {
       max-width: 100%;
       margin-top: 10px;
-      border: 1px solid #ccc;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
@@ -44,30 +43,34 @@
       text-align: center;
       font-size: 13px;
       color: #666;
-      margin-top: 40px;
       padding: 20px;
-    }
-    @media (max-width: 600px) {
-      main {
-        padding: 15px;
-      }
-      img {
-        height: auto;
-      }
     }
     .language-buttons {
       text-align: center;
       margin-bottom: 20px;
     }
     .language-buttons button {
-      margin: 0 5px;
-      padding: 8px 16px;
-      font-size: 14px;
-      border: none;
       background-color: #2b4c7e;
       color: white;
-      border-radius: 5px;
+      border: none;
+      padding: 8px 16px;
+      margin: 0 5px;
+      border-radius: 4px;
       cursor: pointer;
+    }
+    .conversation-link {
+      display: inline-block;
+      background: #2b4c7e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -79,6 +82,13 @@
 </header>
 
 <main>
+
+  <div class="language-buttons">
+    <button disabled>PL</button>
+    <button onclick="window.location.href='guide_en.html'">EN</button>
+    <button onclick="window.location.href='guide_ua.html'">UA</button>
+    <button onclick="window.location.href='guide_de.html'">DE</button>
+  </div>
 
   <section>
     <h2>🔹 1. Logowanie</h2>
@@ -93,8 +103,9 @@
     <h2>🔹 2. Tworzenie rezerwacji</h2>
     <ul>
       <li>Przejdź do zakładki <strong>„Kalendarz”</strong>.</li>
-      <li>Wybierz wolną datę i pokój → kliknij „Utwórz rezerwację”.</li>
-      <li>Uzupełnij dane gościa i kliknij <strong>„Zapisz”</strong>.</li>
+      <li>Wybierz datę i pokój, a następnie kliknij „Utwórz rezerwację”.</li>
+      <li>Uzupełnij dane gościa (imię, nazwisko, telefon, email).</li>
+      <li>Zaznacz typ pobytu i kliknij <strong>„Zapisz”</strong>.</li>
     </ul>
     <img src="create_booking.png" alt="Tworzenie rezerwacji">
   </section>
@@ -102,8 +113,8 @@
   <section>
     <h2>🔹 3. Zameldowanie</h2>
     <ul>
-      <li>Otwórz rezerwację → kliknij <strong>„Zamelduj”</strong>.</li>
-      <li>Sprawdź dane i kliknij „OK”.</li>
+      <li>Otwórz zakładkę <strong>Rezerwacje</strong> → wybierz klienta.</li>
+      <li>Kliknij <strong>„Zamelduj”</strong>, sprawdź dane i zatwierdź.</li>
     </ul>
     <img src="check_in.png" alt="Zameldowanie gościa">
   </section>
@@ -111,8 +122,8 @@
   <section>
     <h2>🔹 4. Wymeldowanie</h2>
     <ul>
-      <li>W oknie rezerwacji kliknij <strong>„Wymelduj”</strong>.</li>
-      <li>Upewnij się, że wszystko zostało opłacone → kliknij „Zakończ”.</li>
+      <li>W otwartej rezerwacji kliknij <strong>„Wymelduj”</strong>.</li>
+      <li>Sprawdź płatności i kliknij „Zakończ”.</li>
     </ul>
     <img src="check_out.png" alt="Wymeldowanie gościa">
   </section>
@@ -120,8 +131,8 @@
   <section>
     <h2>🔹 5. Płatność</h2>
     <ul>
-      <li>W zakładce <strong>„Finanse”</strong> kliknij „Dodaj płatność”.</li>
-      <li>Wprowadź kwotę, metodę płatności → kliknij „Zapisz”.</li>
+      <li>Przejdź do zakładki <strong>Finanse</strong> i kliknij „Dodaj płatność”.</li>
+      <li>Wybierz metodę: gotówka, karta, przelew.</li>
     </ul>
     <img src="payment.png" alt="Płatność">
   </section>
@@ -129,16 +140,16 @@
   <section>
     <h2>🔹 6. Szukanie klienta</h2>
     <ul>
-      <li>Przejdź do zakładki <strong>„Klienci”</strong>.</li>
-      <li>Wprowadź imię, nazwisko lub numer telefonu klienta.</li>
+      <li>Przejdź do zakładki <strong>Klienci</strong>.</li>
+      <li>Wpisz nazwisko, numer telefonu lub email, aby znaleźć rezerwację.</li>
     </ul>
     <img src="search_customer.png" alt="Szukanie klienta">
   </section>
 
   <section>
     <h2>📘 Przykładowe rozmowy z gośćmi</h2>
-    <p>Przejdź do scenariuszy rozmów w 4 językach:</p>
-    <a href="conversations.html" style="display:inline-block;background:#2b4c7e;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;margin-top:10px;">➡️ Przykłady rozmów</a>
+    <p>Zapoznaj się z realistycznymi scenariuszami w 4 językach:</p>
+    <a class="conversation-link" href="conversations.html">➡️ Przejdź do rozmów</a>
   </section>
 
 </main>
@@ -149,3 +160,4 @@
 
 </body>
 </html>
+
