@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Приклади розмов з гостем</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rozmowy z gośćmi</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f7f9fb;
+      background-color: #f4f6f8;
       margin: 0;
       padding: 0;
     }
     header {
-      background: #2b4c7e;
+      background-color: #2b4c7e;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
     main {
       max-width: 900px;
@@ -22,114 +23,105 @@
       background: white;
       padding: 30px;
     }
+    .language-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .language-buttons button {
+      margin: 5px;
+      padding: 8px 16px;
+      background-color: #2b4c7e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .conversation {
+      display: none;
+    }
+    .conversation.active {
+      display: block;
+    }
     h2 {
       color: #2b4c7e;
-      margin-top: 30px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
+    .phrase {
+      margin-bottom: 20px;
     }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      text-align: left;
-    }
-    th {
-      background: #e7ecf5;
-    }
-    footer {
-      text-align: center;
-      font-size: 13px;
-      color: #666;
-      padding: 20px;
+    .label {
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Rozmowy z gośćmi hotelowymi</h1>
+    <p>Wybierz język, aby zobaczyć typowe scenariusze</p>
+  </header>
 
-<header>
-  <h1>Приклади розмов з гостем / Przykłady rozmów z gościem / Guest Conversation Examples</h1>
-</header>
+  <main>
+    <div class="language-buttons">
+      <button onclick="showConversation('ua')">🇺🇦 Українська</button>
+      <button onclick="showConversation('pl')">🇵🇱 Polski</button>
+      <button onclick="showConversation('en')">🇬🇧 English</button>
+      <button onclick="showConversation('de')">🇩🇪 Deutsch</button>
+    </div>
 
-<main>
+    <div id="ua" class="conversation">
+      <h2>Сценарії (Українська)</h2>
+      <div class="phrase">
+        <div class="label">1. Реєстрація:</div>
+        Доброго дня! Вас вітає готель. Як я можу вам допомогти?
+      </div>
+      <div class="phrase">
+        <div class="label">2. Скарга:</div>
+        Нам дуже шкода! Ми одразу вирішимо цю проблему.
+      </div>
+    </div>
 
-  <h2>🛎️ 1. Привітання / Powitanie / Greeting</h2>
-  <table>
-    <tr>
-      <th>Українська</th>
-      <th>Polski</th>
-      <th>English</th>
-    </tr>
-    <tr>
-      <td>Доброго дня! Чим можу допомогти?</td>
-      <td>Dzień dobry! W czym mogę pomóc?</td>
-      <td>Good afternoon! How can I help you?</td>
-    </tr>
-    <tr>
-      <td>Ви маєте бронювання?</td>
-      <td>Czy ma Pan(i) rezerwację?</td>
-      <td>Do you have a reservation?</td>
-    </tr>
-  </table>
+    <div id="pl" class="conversation">
+      <h2>Scenariusze (Polski)</h2>
+      <div class="phrase">
+        <div class="label">1. Rejestracja:</div>
+        Dzień dobry! Witamy w naszym hotelu. W czym mogę pomóc?
+      </div>
+      <div class="phrase">
+        <div class="label">2. Skarga:</div>
+        Bardzo nam przykro! Natychmiast zajmiemy się tym problemem.
+      </div>
+    </div>
 
-  <h2>🏨 2. Заселення / Zameldowanie / Check-in</h2>
-  <table>
-    <tr>
-      <td>Можна Ваш паспорт або ID, будь ласка?</td>
-      <td>Poproszę paszport lub dowód osobisty.</td>
-      <td>May I have your passport or ID, please?</td>
-    </tr>
-    <tr>
-      <td>Ваш номер — 203, ось ваш ключ.</td>
-      <td>Twój pokój to 203, oto klucz.</td>
-      <td>Your room is 203, here is your key.</td>
-    </tr>
-  </table>
+    <div id="en" class="conversation">
+      <h2>Scenarios (English)</h2>
+      <div class="phrase">
+        <div class="label">1. Check-in:</div>
+        Good afternoon! Welcome to our hotel. How can I help you?
+      </div>
+      <div class="phrase">
+        <div class="label">2. Complaint:</div>
+        We are very sorry! We will solve this issue immediately.
+      </div>
+    </div>
 
-  <h2>🍳 3. Сніданок / Śniadanie / Breakfast</h2>
-  <table>
-    <tr>
-      <td>Сніданок подається з 7:00 до 10:00.</td>
-      <td>Śniadanie jest serwowane od 7:00 do 10:00.</td>
-      <td>Breakfast is served from 7:00 to 10:00.</td>
-    </tr>
-  </table>
+    <div id="de" class="conversation">
+      <h2>Szenarien (Deutsch)</h2>
+      <div class="phrase">
+        <div class="label">1. Einchecken:</div>
+        Guten Tag! Willkommen in unserem Hotel. Wie kann ich Ihnen helfen? <em>(Гутен таг! Вількоммен ін унзерам Хотел. Ві кан іх Інен хельфен?)</em>
+      </div>
+      <div class="phrase">
+        <div class="label">2. Beschwerde:</div>
+        Es tut uns sehr leid! Wir kümmern uns sofort darum. <em>(Ес тут унс зеа лайт! Віа кюммерн унс зофорт дарум.)</em>
+      </div>
+    </div>
+  </main>
 
-  <h2>💵 4. Оплата / Płatność / Payment</h2>
-  <table>
-    <tr>
-      <td>Загальна сума до сплати — 500 гривень.</td>
-      <td>Całkowita kwota do zapłaty to 500 hrywien.</td>
-      <td>Total amount to pay is 500 hryvnias.</td>
-    </tr>
-    <tr>
-      <td>Чи бажаєте оплатити готівкою чи картою?</td>
-      <td>Chce Pan(i) zapłacić gotówką czy kartą?</td>
-      <td>Would you like to pay in cash or by card?</td>
-    </tr>
-  </table>
-
-  <h2>🚪 5. Виселення / Wymeldowanie / Check-out</h2>
-  <table>
-    <tr>
-      <td>Ви виселяєтесь сьогодні?</td>
-      <td>Wymeldowuje się Pan(i) dzisiaj?</td>
-      <td>Are you checking out today?</td>
-    </tr>
-    <tr>
-      <td>Дякуємо за ваше перебування!</td>
-      <td>Dziękujemy za pobyt!</td>
-      <td>Thank you for your stay!</td>
-    </tr>
-  </table>
-
-</main>
-
-<footer>
-  © 2025 KWHotel • Розмовні приклади для персоналу
-</footer>
-
+  <script>
+    function showConversation(lang) {
+      const conversations = document.querySelectorAll('.conversation');
+      conversations.forEach(c => c.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+    }
+  </script>
 </body>
 </html>
