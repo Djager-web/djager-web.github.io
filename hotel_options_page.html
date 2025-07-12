@@ -59,6 +59,19 @@
       border-radius: 5px;
       margin-bottom: 20px;
     }
+    .lang-nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .lang-nav button {
+      margin: 0 5px;
+      background-color: #2b4c7e;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
     @media (max-width: 600px) {
       main {
         padding: 15px;
@@ -83,72 +96,80 @@
   </nav>
 
   <main>
-    <section id="pokoje" class="active">
-      <h2>Pokoje i Apartamenty</h2>
-      <div class="block">
-        <p>Hotel 77 oferuje komfortowe i nowocześnie urządzone pokoje w sercu Zamościa. Idealne zarówno dla gości indywidualnych, jak i biznesowych.</p>
-        <ul>
-          <li>Telewizor LCD</li>
-          <li>Bezpłatny dostęp do Wi-Fi</li>
-          <li>Biurko do pracy i wygodne łóżka</li>
-          <li>Łazienka z prysznicem i suszarką do włosów</li>
-          <li>Codzienne sprzątanie</li>
-        </ul>
-      </div>
-      <div class="block">
-        <strong>Rodzaje pokoi:</strong>
-        <ul>
-          <li>Pokój jednoosobowy – idealny dla podróżujących służbowo</li>
-          <li>Pokój dwuosobowy twin/double – dla par i znajomych</li>
-          <li>Pokój trzyosobowy – przestrzeń dla rodziny</li>
-          <li>Apartament typu studio – wygoda i prywatność</li>
-        </ul>
-      </div>
-      <div class="block">
-        <p>Oferujemy śniadania w formie szwedzkiego stołu. Nie oferujemy usług obiadowych ani kolacyjnych. W pobliżu dostępne są liczne restauracje.</p>
-      </div>
-    </section>
+    <div class="lang-nav">
+      <button onclick="switchLanguage('pl')">PL</button>
+      <button onclick="switchLanguage('en')">EN</button>
+      <button onclick="switchLanguage('ua')">UA</button>
+    </div>
 
-    <section id="konferencje">
-      <h2>Konferencje i Eventy</h2>
-      <div class="block">
-        <p>Nasza nowoczesna sala konferencyjna to doskonałe miejsce na spotkania biznesowe, prezentacje, szkolenia i warsztaty.</p>
-        <ul>
-          <li>Możliwość pomieszczenia do 70 osób</li>
-          <li>Wyposażenie: rzutnik, ekran, system nagłośnienia</li>
-          <li>Dostęp do szybkiego internetu i klimatyzacja</li>
-          <li>Możliwość pełnego zaciemnienia</li>
-        </ul>
-      </div>
-      <div class="block">
-        <p>Organizujemy również imprezy rodzinne i firmowe: bankiety, jubileusze, wieczory integracyjne. Dostosowujemy układ sali oraz oferujemy catering i obsługę.</p>
-      </div>
-    </section>
+    <div id="lang-pl" class="lang-content">
+      <section id="pokoje" class="active">
+        <h2>Pokoje i Apartamenty</h2>
+        <div class="block">
+          <p>Hotel 77 oferuje komfortowe i nowocześnie urządzone pokoje w sercu Zamościa. Idealne zarówno dla gości indywidualnych, jak i biznesowych.</p>
+          <ul>
+            <li>Telewizor LCD</li>
+            <li>Bezpłatny dostęp do Wi-Fi</li>
+            <li>Biurko do pracy i wygodne łóżka</li>
+            <li>Łazienka z prysznicem i suszarką do włosów</li>
+            <li>Codzienne sprzątanie</li>
+          </ul>
+        </div>
+        <div class="block">
+          <strong>Rodzaje pokoi:</strong>
+          <ul>
+            <li>Pokój jednoosobowy – idealny dla podróżujących służbowo</li>
+            <li>Pokój dwuosobowy twin/double – dla par i znajomych</li>
+            <li>Pokój trzyosobowy – przestrzeń dla rodziny</li>
+            <li>Apartament typu studio – wygoda i prywatność</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p>Oferujemy śniadania w formie szwedzkiego stołu. Nie oferujemy usług obiadowych ani kolacyjnych. W pobliżu dostępne są liczne restauracje.</p>
+        </div>
+      </section>
 
-    <section id="okolice">
-      <h2>Zamość i Okolice</h2>
-      <div class="block">
-        <p>Zamość, zwany "Perłą Renesansu", to miasto pełne zabytków i atrakcji turystycznych wpisanych na listę UNESCO. Warto odwiedzić:</p>
-        <ul>
-          <li>Rynek Wielki – otoczony kolorowymi kamienicami</li>
-          <li>Ratusz z charakterystycznymi wachlarzowymi schodami</li>
-          <li>Twierdzę Zamość i Bastion VII</li>
-          <li>Katedrę Zmartwychwstania Pańskiego i św. Tomasza</li>
-          <li>Zoo przy ul. Szczebrzeska 12</li>
-          <li>Synagogę, Akademię Zamojską oraz dawną Rotundę</li>
-        </ul>
-      </div>
-      <div class="block">
-        <p>Okolica oferuje także wiele możliwości aktywnego wypoczynku:</p>
-        <ul>
-          <li>Park Miejski – idealny na spacery i relaks</li>
-          <li>Trasy rowerowe przez Krasnobród, Zwierzyniec, Szczebrzeszyn</li>
-          <li>Spływy kajakowe po Wieprzu</li>
-          <li>Muzeum Zamojskie i liczne galerie sztuki</li>
-        </ul>
-        <p>Blisko hotelu znajdują się ulice: ul. Ormiańska, ul. Grodzka, ul. Żeromskiego, ul. Partyzantów – w pobliżu liczne restauracje, kawiarnie i sklepy.</p>
-      </div>
-    </section>
+      <section id="konferencje">
+        <h2>Konferencje i Eventy</h2>
+        <div class="block">
+          <p>Nasza nowoczesna sala konferencyjna to doskonałe miejsce na spotkania biznesowe, prezentacje, szkolenia i warsztaty.</p>
+          <ul>
+            <li>Możliwość pomieszczenia do 70 osób</li>
+            <li>Wyposażenie: rzutnik, ekran, system nagłośnienia</li>
+            <li>Dostęp do szybkiego internetu i klimatyzacja</li>
+            <li>Możliwość pełnego zaciemnienia</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p>Organizujemy również imprezy rodzinne i firmowe: bankiety, jubileusze, wieczory integracyjne. Dostosowujemy układ sali oraz oferujemy catering i obsługę.</p>
+        </div>
+      </section>
+
+      <section id="okolice">
+        <h2>Zamość i Okolice</h2>
+        <div class="block">
+          <p>Zamość, zwany "Perłą Renesansu", to miasto pełne zabytków i atrakcji turystycznych wpisanych na listę UNESCO. Warto odwiedzić:</p>
+          <ul>
+            <li>Rynek Wielki – otoczony kolorowymi kamienicami</li>
+            <li>Ratusz z charakterystycznymi wachlarzowymi schodami</li>
+            <li>Twierdzę Zamość i Bastion VII</li>
+            <li>Katedrę Zmartwychwstania Pańskiego i św. Tomasza</li>
+            <li>Zoo przy ul. Szczebrzeska 12</li>
+            <li>Synagogę, Akademię Zamojską oraz dawną Rotundę</li>
+          </ul>
+        </div>
+        <div class="block">
+          <p>Okolica oferuje także wiele możliwości aktywnego wypoczynku:</p>
+          <ul>
+            <li>Park Miejski – idealny na spacery i relaks</li>
+            <li>Trasy rowerowe przez Krasnobród, Zwierzyniec, Szczebrzeszyn</li>
+            <li>Spływy kajakowe po Wieprzu</li>
+            <li>Muzeum Zamojskie i liczne galerie sztuki</li>
+          </ul>
+          <p>Blisko hotelu znajdują się ulice: ul. Ormiańska, ul. Grodzka, ul. Żeromskiego, ul. Partyzantów – w pobliżu liczne restauracje, kawiarnie i sklepy.</p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <script>
@@ -157,6 +178,15 @@
       sections.forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
+
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.style.display = 'none');
+      const selected = document.getElementById('lang-' + lang);
+      if (selected) selected.style.display = 'block';
+    }
+
+    // Initialize language display
+    switchLanguage('pl');
   </script>
 </body>
 </html>
