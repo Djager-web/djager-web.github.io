@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>KWHotel — Інструкція для персоналу</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przewodnik KWHotel</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -46,82 +47,105 @@
       margin-top: 40px;
       padding: 20px;
     }
+    @media (max-width: 600px) {
+      main {
+        padding: 15px;
+      }
+      img {
+        height: auto;
+      }
+    }
+    .language-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .language-buttons button {
+      margin: 0 5px;
+      padding: 8px 16px;
+      font-size: 14px;
+      border: none;
+      background-color: #2b4c7e;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>KWHotel — Інструкція для персоналу</h1>
-  <p>Як здійснювати резервації, керувати номерами та клієнтами</p>
+  <h1>KWHotel — Instrukcja dla personelu</h1>
+  <p>Jak zarządzać rezerwacjami, pokojami i klientami</p>
 </header>
 
 <main>
 
   <section>
-    <h2>🔹 1. Вхід у програму</h2>
+    <h2>🔹 1. Logowanie</h2>
     <ul>
-      <li>Запустіть програму KWHotel з робочого столу.</li>
-      <li>Увійдіть, використовуючи логін і пароль.</li>
+      <li>Uruchom program KWHotel z pulpitu.</li>
+      <li>Zaloguj się, używając loginu i hasła.</li>
     </ul>
-    <img src="login.png" alt="Екран входу в KWHotel">
+    <img src="login.png" alt="Ekran logowania KWHotel">
   </section>
 
   <section>
-    <h2>🔹 2. Створення бронювання</h2>
+    <h2>🔹 2. Tworzenie rezerwacji</h2>
     <ul>
-      <li>Перейдіть у вкладку <strong>«Календар»</strong>.</li>
-      <li>Оберіть вільну дату та номер → натисніть "Створити бронювання".</li>
-      <li>Заповніть дані гостя та натисніть <strong>«Зберегти»</strong>.</li>
+      <li>Przejdź do zakładki <strong>„Kalendarz”</strong>.</li>
+      <li>Wybierz wolną datę i pokój → kliknij „Utwórz rezerwację”.</li>
+      <li>Uzupełnij dane gościa i kliknij <strong>„Zapisz”</strong>.</li>
     </ul>
-    <img src="create_booking.png" alt="Створення бронювання в календарі">
+    <img src="create_booking.png" alt="Tworzenie rezerwacji">
   </section>
 
   <section>
-    <h2>🔹 3. Заселення гостя</h2>
+    <h2>🔹 3. Zameldowanie</h2>
     <ul>
-      <li>Відкрийте бронювання → натисніть <strong>«Заселити»</strong>.</li>
-      <li>Перевірте дані та натисніть «ОК».</li>
+      <li>Otwórz rezerwację → kliknij <strong>„Zamelduj”</strong>.</li>
+      <li>Sprawdź dane i kliknij „OK”.</li>
     </ul>
-    <img src="check_in.png" alt="Заселення гостя">
+    <img src="check_in.png" alt="Zameldowanie gościa">
   </section>
 
   <section>
-    <h2>🔹 4. Виселення гостя</h2>
+    <h2>🔹 4. Wymeldowanie</h2>
     <ul>
-      <li>У вікні бронювання натисніть <strong>«Виселити»</strong>.</li>
-      <li>Перевірте чи гість оплатив усе та натисніть <strong>«Завершити»</strong>.</li>
+      <li>W oknie rezerwacji kliknij <strong>„Wymelduj”</strong>.</li>
+      <li>Upewnij się, że wszystko zostało opłacone → kliknij „Zakończ”.</li>
     </ul>
-    <img src="check_out.png" alt="Виселення гостя">
+    <img src="check_out.png" alt="Wymeldowanie gościa">
   </section>
 
   <section>
-    <h2>🔹 5. Оплата</h2>
+    <h2>🔹 5. Płatność</h2>
     <ul>
-      <li>У вкладці <strong>«Фінанси»</strong> натисніть «Додати платіж».</li>
-      <li>Вкажіть суму, метод оплати та натисніть «Зберегти».</li>
+      <li>W zakładce <strong>„Finanse”</strong> kliknij „Dodaj płatność”.</li>
+      <li>Wprowadź kwotę, metodę płatności → kliknij „Zapisz”.</li>
     </ul>
-    <img src="payment.png" alt="Оплата бронювання">
+    <img src="payment.png" alt="Płatność">
   </section>
 
   <section>
-    <h2>🔹 6. Пошук клієнтів</h2>
+    <h2>🔹 6. Szukanie klienta</h2>
     <ul>
-      <li>Перейдіть у вкладку <strong>«Клієнти»</strong>.</li>
-      <li>Введіть ім’я, прізвище або телефон клієнта.</li>
+      <li>Przejdź do zakładki <strong>„Klienci”</strong>.</li>
+      <li>Wprowadź imię, nazwisko lub numer telefonu klienta.</li>
     </ul>
-    <img src="search_customer.png" alt="Пошук клієнта">
-  </section>
-    <section>
-    <h2>📘 Практика розмов з гостями</h2>
-    <p>Перейдіть на сторінку з типовими фразами у спілкуванні з гостями трьома мовами:</p>
-    <a href="conversations.html" style="display:inline-block;background:#2b4c7e;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;margin-top:10px;">➡️ Приклади розмов</a>
+    <img src="search_customer.png" alt="Szukanie klienta">
   </section>
 
-  <footer>
-    © 2025 KWHotel • Інструкція для персоналу готелю
-  </footer>
+  <section>
+    <h2>📘 Przykładowe rozmowy z gośćmi</h2>
+    <p>Przejdź do scenariuszy rozmów w 4 językach:</p>
+    <a href="conversations.html" style="display:inline-block;background:#2b4c7e;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;margin-top:10px;">➡️ Przykłady rozmów</a>
+  </section>
 
 </main>
+
+<footer>
+  © 2025 KWHotel • Przewodnik dla personelu hotelowego
+</footer>
 
 </body>
 </html>
