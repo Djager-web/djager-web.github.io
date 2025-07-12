@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KWHotel – Przewodnik</title>
   <style>
     body {
@@ -45,27 +45,19 @@
       color: #666;
       padding: 20px;
     }
-    .language-buttons {
+    .nav-buttons {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
-    .language-buttons button {
+    .nav-buttons a button {
       background-color: #2b4c7e;
       color: white;
       border: none;
-      padding: 8px 16px;
-      margin: 0 5px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .conversation-link {
-      display: inline-block;
-      background: #2b4c7e;
-      color: white;
-      padding: 10px 20px;
+      padding: 12px 20px;
+      margin: 10px;
       border-radius: 6px;
-      text-decoration: none;
-      margin-top: 10px;
+      cursor: pointer;
+      font-size: 16px;
     }
     @media (max-width: 600px) {
       main {
@@ -77,85 +69,30 @@
 <body>
 
 <header>
-  <h1>KWHotel — Instrukcja dla personelu</h1>
-  <p>Jak zarządzać rezerwacjami, pokojami i klientami</p>
+  <h1>KWHotel – Centrum informacji</h1>
+  <p>Wybierz odpowiedni dział, aby uzyskać potrzebne informacje</p>
 </header>
 
 <main>
-
-  <div class="language-buttons">
-    <button disabled>PL</button>
-    <button onclick="window.location.href='guide_en.html'">EN</button>
-    <button onclick="window.location.href='guide_ua.html'">UA</button>
-    <button onclick="window.location.href='guide_de.html'">DE</button>
+  <div class="nav-buttons">
+    <a href="index.html"><button>🏨 Instrukcja KWHotel</button></a>
+    <a href="conversations.html"><button>💬 Rozmowy z Gośćmi</button></a>
+    <a href="hotel_options_page.html"><button>📌 Oferta Hotelu</button></a>
   </div>
 
   <section>
-    <h2>🔹 1. Logowanie</h2>
+    <h2>📘 Witaj na stronie głównej</h2>
+    <p>To centrum nawigacyjne pozwala szybko przejść do:</p>
     <ul>
-      <li>Uruchom program KWHotel z pulpitu.</li>
-      <li>Zaloguj się, używając loginu i hasła.</li>
+      <li><strong>Instrukcji obsługi KWHotel</strong> – krok po kroku jak zarządzać rezerwacjami, płatnościami, klientami.</li>
+      <li><strong>Rozmów z gośćmi</strong> – gotowe scenariusze konwersacji w języku polskim, angielskim, ukraińskim i niemieckim.</li>
+      <li><strong>Oferty hotelowej</strong> – szczegółowe informacje o pokojach, usługach, atrakcjach Zamościa i okolicy.</li>
     </ul>
-    <img src="login.png" alt="Ekran logowania KWHotel">
   </section>
-
-  <section>
-    <h2>🔹 2. Tworzenie rezerwacji</h2>
-    <ul>
-      <li>Przejdź do zakładki <strong>„Kalendarz”</strong>.</li>
-      <li>Wybierz datę i pokój, a następnie kliknij „Utwórz rezerwację”.</li>
-      <li>Uzupełnij dane gościa (imię, nazwisko, telefon, email).</li>
-      <li>Zaznacz typ pobytu i kliknij <strong>„Zapisz”</strong>.</li>
-    </ul>
-    <img src="create_booking.png" alt="Tworzenie rezerwacji">
-  </section>
-
-  <section>
-    <h2>🔹 3. Zameldowanie</h2>
-    <ul>
-      <li>Otwórz zakładkę <strong>Rezerwacje</strong> → wybierz klienta.</li>
-      <li>Kliknij <strong>„Zamelduj”</strong>, sprawdź dane i zatwierdź.</li>
-    </ul>
-    <img src="check_in.png" alt="Zameldowanie gościa">
-  </section>
-
-  <section>
-    <h2>🔹 4. Wymeldowanie</h2>
-    <ul>
-      <li>W otwartej rezerwacji kliknij <strong>„Wymelduj”</strong>.</li>
-      <li>Sprawdź płatności i kliknij „Zakończ”.</li>
-    </ul>
-    <img src="check_out.png" alt="Wymeldowanie gościa">
-  </section>
-
-  <section>
-    <h2>🔹 5. Płatność</h2>
-    <ul>
-      <li>Przejdź do zakładki <strong>Finanse</strong> i kliknij „Dodaj płatność”.</li>
-      <li>Wybierz metodę: gotówka, karta, przelew.</li>
-    </ul>
-    <img src="payment.png" alt="Płatność">
-  </section>
-
-  <section>
-    <h2>🔹 6. Szukanie klienta</h2>
-    <ul>
-      <li>Przejdź do zakładki <strong>Klienci</strong>.</li>
-      <li>Wpisz nazwisko, numer telefonu lub email, aby znaleźć rezerwację.</li>
-    </ul>
-    <img src="search_customer.png" alt="Szukanie klienta">
-  </section>
-
-  <section>
-    <h2>📘 Przykładowe rozmowy z gośćmi</h2>
-    <p>Zapoznaj się z realistycznymi scenariuszami w 4 językach:</p>
-    <a class="conversation-link" href="conversations.html">➡️ Przejdź do rozmów</a>
-  </section>
-
 </main>
 
 <footer>
-  © 2025 KWHotel • Przewodnik dla personelu hotelowego
+  © 2025 KWHotel • Strona główna dla personelu hotelowego
 </footer>
 
 </body>
