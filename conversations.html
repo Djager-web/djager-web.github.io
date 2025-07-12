@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rozmowy z gośćmi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scenariusze rozmów z gośćmi</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
-      margin: 0;
-      padding: 0;
+      background: #f4f6f8;
+      margin: 0; padding: 0;
     }
     header {
       background-color: #2b4c7e;
@@ -35,6 +34,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
     }
     .conversation {
       display: none;
@@ -44,19 +44,35 @@
     }
     h2 {
       color: #2b4c7e;
+      margin-top: 0;
+    }
+    .scenario {
+      margin-bottom: 30px;
     }
     .phrase {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      line-height: 1.4;
     }
     .label {
       font-weight: bold;
+      color: #194a82;
+    }
+    .role {
+      font-style: italic;
+      margin-right: 5px;
+      color: #2b4c7e;
+    }
+    em.transcription {
+      font-style: normal;
+      color: #666;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Rozmowy z gośćmi hotelowymi</h1>
-    <p>Wybierz język, aby zobaczyć typowe scenariusze</p>
+    <h1>Scenariusze rozmów z gośćmi hotelowymi</h1>
+    <p>Wybierz język, aby zobaczyć pełne scenariusze rozmów</p>
   </header>
 
   <main>
@@ -67,53 +83,236 @@
       <button onclick="showConversation('de')">🇩🇪 Deutsch</button>
     </div>
 
+    <!-- Українська -->
     <div id="ua" class="conversation">
-      <h2>Сценарії (Українська)</h2>
-      <div class="phrase"><span class="label">1. Реєстрація:</span> Доброго дня! Ласкаво просимо. Як я можу вам допомогти?</div>
-      <div class="phrase"><span class="label">2. Скарга:</span> Нам дуже шкода! Ми вирішимо це негайно.</div>
-      <div class="phrase"><span class="label">3. Пізнє виселення:</span> Так, пізнє виселення можливе до 14:00 за додаткову плату.</div>
-      <div class="phrase"><span class="label">4. Пароль Wi-Fi:</span> Наш Wi-Fi має назву "HotelWiFi". Пароль: welcome123</div>
-      <div class="phrase"><span class="label">5. Додатковий рушник:</span> Звичайно, я принесу додатковий рушник.</div>
-      <div class="phrase"><span class="label">6. Загублені речі:</span> Що саме ви загубили? Ми перевіримо це негайно.</div>
+      <h2>Сценарії для персоналу (Українська)</h2>
+
+      <div class="scenario">
+        <h3>1. Телефонна бронь</h3>
+        <div class="phrase"><span class="role">Працівник:</span> Доброго дня, готель «XYZ», чим можу допомогти?</div>
+        <div class="phrase"><span class="role">Гість:</span> Добрий день, хочу забронювати номер.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Звичайно! На які дати плануєте проживання?</div>
+        <div class="phrase"><span class="role">Гість:</span> З 10 по 15 серпня.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Чи знаєте, що вартість включає тільки сніданок?</div>
+        <div class="phrase"><span class="role">Гість:</span> Так, це підходить.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Будь ласка, скажіть своє ім'я, прізвище та номер телефону.</div>
+        <div class="phrase"><span class="role">Гість:</span> Іван Петренко, 098 765 4321.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Дякую. Ваша бронь підтверджена. Ми надішлемо підтвердження на електронну пошту. Чи потрібна допомога з трансфером?</div>
+        <div class="phrase"><span class="role">Гість:</span> Ні, дякую.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Гарного дня!</div>
+      </div>
+
+      <div class="scenario">
+        <h3>2. Особисте заселення</h3>
+        <div class="phrase"><span class="role">Працівник:</span> Доброго дня! Ласкаво просимо до готелю «XYZ». Чи маєте ви бронювання?</div>
+        <div class="phrase"><span class="role">Гість:</span> Так, на ім’я Петренко.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Чудово! Ваш номер буде готовий о 14:00. Сніданок подається з 7 до 10 ранку.</div>
+        <div class="phrase"><span class="role">Гість:</span> Добре, дякую.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Ось ваш ключ. Якщо потрібна допомога, звертайтесь.</div>
+      </div>
+
+      <div class="scenario">
+        <h3>3. Скарга від гостя</h3>
+        <div class="phrase"><span class="role">Гість:</span> У кімнаті дуже шумно.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Вибачте за незручності, я спробую вирішити це негайно.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Чи хочете ви змінити номер?</div>
+        <div class="phrase"><span class="role">Гість:</span> Так, було б добре.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Чудово, я організую це.</div>
+      </div>
+
+      <div class="scenario">
+        <h3>4. Виселення</h3>
+        <div class="phrase"><span class="role">Працівник:</span> Доброго дня! Чи готові ви до виселення?</div>
+        <div class="phrase"><span class="role">Гість:</span> Так, дякую.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Будь ласка, оплатіть рахунок на рецепції.</div>
+        <div class="phrase"><span class="role">Гість:</span> Добре.</div>
+        <div class="phrase"><span class="role">Працівник:</span> Дякуємо за візит. Сподіваємось побачити вас знову!</div>
+      </div>
+
+      <div class="scenario">
+        <h3>5. Додаткові типові питання</h3>
+        <div class="phrase"><span class="role">Гість:</span> Який пароль Wi-Fi?</div>
+        <div class="phrase"><span class="role">Працівник:</span> Назва мережі — HotelWiFi, пароль — welcome123.</div>
+        <div class="phrase"><span class="role">Гість:</span> Чи можна замовити додатковий рушник?</div>
+        <div class="phrase"><span class="role">Працівник:</span> Звичайно, я зараз принесу.</div>
+      </div>
     </div>
 
+    <!-- Polski -->
     <div id="pl" class="conversation">
-      <h2>Scenariusze (Polski)</h2>
-      <div class="phrase"><span class="label">1. Rejestracja:</span> Dzień dobry! Witamy w hotelu. W czym mogę pomóc?</div>
-      <div class="phrase"><span class="label">2. Skarga:</span> Przykro nam! Zaraz się tym zajmiemy.</div>
-      <div class="phrase"><span class="label">3. Późne wymeldowanie:</span> Tak, możliwe do 14:00 za dodatkową opłatą.</div>
-      <div class="phrase"><span class="label">4. Hasło do Wi-Fi:</span> Nasza sieć to "HotelWiFi". Hasło: welcome123</div>
-      <div class="phrase"><span class="label">5. Dodatkowy ręcznik:</span> Oczywiście, zaraz przyniosę ręcznik.</div>
-      <div class="phrase"><span class="label">6. Zagubione rzeczy:</span> Co Pan/Pani zgubił(a)? Sprawdzimy to.</div>
+      <h2>Scenariusze dla personelu (Polski)</h2>
+
+      <div class="scenario">
+        <h3>1. Rezerwacja telefoniczna</h3>
+        <div class="phrase"><span class="role">Pracownik:</span> Dzień dobry, hotel XYZ, w czym mogę pomóc?</div>
+        <div class="phrase"><span class="role">Gość:</span> Dzień dobry, chciałbym zarezerwować pokój.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Oczywiście! Na jakie daty planuje pan pobyt?</div>
+        <div class="phrase"><span class="role">Gość:</span> Od 10 do 15 sierpnia.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Proszę pamiętać, że w cenie jest tylko śniadanie.</div>
+        <div class="phrase"><span class="role">Gość:</span> W porządku, dziękuję.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Proszę podać swoje imię, nazwisko i numer telefonu.</div>
+        <div class="phrase"><span class="role">Gość:</span> Jan Kowalski, 123 456 789.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Dziękuję. Rezerwacja została potwierdzona. Wyślemy potwierdzenie e-mailem. Czy potrzebuje Pan pomocy z transportem?</div>
+        <div class="phrase"><span class="role">Gość:</span> Nie, dziękuję.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Miłego dnia!</div>
+      </div>
+
+      <div class="scenario">
+        <h3>2. Zameldowanie osobiste</h3>
+        <div class="phrase"><span class="role">Pracownik:</span> Dzień dobry! Witamy w hotelu XYZ. Czy mają Państwo rezerwację?</div>
+        <div class="phrase"><span class="role">Gość:</span> Tak, na nazwisko Kowalski.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Doskonale! Pański pokój będzie gotowy od godziny 14:00. Śniadanie serwujemy od 7 do 10 rano.</div>
+        <div class="phrase"><span class="role">Gość:</span> Dziękuję bardzo.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Oto klucz do pokoju. W razie potrzeby proszę się zwrócić.</div>
+      </div>
+
+      <div class="scenario">
+        <h3>3. Reklamacje gościa</h3>
+        <div class="phrase"><span class="role">Gość:</span> W pokoju jest bardzo głośno.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Przepraszam za niedogodności, zaraz postaram się to rozwiązać.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Czy chce Pan zmienić pokój?</div>
+        <div class="phrase"><span class="role">Gość:</span> Tak, to byłoby dobrze.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Świetnie, zaraz się tym zajmę.</div>
+      </div>
+
+      <div class="scenario">
+        <h3>4. Wymeldowanie</h3>
+        <div class="phrase"><span class="role">Pracownik:</span> Dzień dobry! Czy są Państwo gotowi do wymeldowania?</div>
+        <div class="phrase"><span class="role">Gość:</span> Tak, dziękuję.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Proszę opłacić rachunek na recepcji.</div>
+        <div class="phrase"><span class="role">Gość:</span> Dobrze.</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Dziękujemy za pobyt. Zapraszamy ponownie!</div>
+      </div>
+
+      <div class="scenario">
+        <h3>5. Popularne pytania</h3>
+        <div class="phrase"><span class="role">Gość:</span> Jaki jest hasło do Wi-Fi?</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Nazwa sieci to HotelWiFi, hasło to welcome123.</div>
+        <div class="phrase"><span class="role">Gość:</span> Czy można prosić o dodatkowy ręcznik?</div>
+        <div class="phrase"><span class="role">Pracownik:</span> Oczywiście, zaraz przyniosę.</div>
+      </div>
     </div>
 
+    <!-- English -->
     <div id="en" class="conversation">
-      <h2>Scenarios (English)</h2>
-      <div class="phrase"><span class="label">1. Check-in:</span> Good afternoon! Welcome. How can I help you?</div>
-      <div class="phrase"><span class="label">2. Complaint:</span> We're very sorry! We'll take care of it immediately.</div>
-      <div class="phrase"><span class="label">3. Late check-out:</span> Yes, it's possible until 2 PM for an extra fee.</div>
-      <div class="phrase"><span class="label">4. Wi-Fi password:</span> Our Wi-Fi is called "HotelWiFi". Password: welcome123</div>
-      <div class="phrase"><span class="label">5. Extra towel:</span> Of course, I'll bring you another towel.</div>
-      <div class="phrase"><span class="label">6. Lost items:</span> What have you lost? We'll check right away.</div>
+      <h2>Guest Conversation Scenarios (English)</h2>
+
+      <div class="scenario">
+        <h3>1. Phone Reservation</h3>
+        <div class="phrase"><span class="role">Staff:</span> Good day, Hotel XYZ, how can I help you?</div>
+        <div class="phrase"><span class="role">Guest:</span> Hello, I would like to book a room.</div>
+        <div class="phrase"><span class="role">Staff:</span> Certainly! For which dates do you plan to stay?</div>
+        <div class="phrase"><span class="role">Guest:</span> From August 10 to August 15.</div>
+        <div class="phrase"><span class="role">Staff:</span> Please note, only breakfast is included in the price.</div>
+        <div class="phrase"><span class="role">Guest:</span> That's fine, thank you.</div>
+        <div class="phrase"><span class="role">Staff:</span> Could you please provide your full name and phone number?</div>
+        <div class="phrase"><span class="role">Guest:</span> John Smith, 123-456-7890.</div>
+        <div class="phrase"><span class="role">Staff:</span> Thank you. Your booking is confirmed. We will send a confirmation email. Do you need assistance with transportation?</div>
+        <div class="phrase"><span class="role">Guest:</span> No, thank you.</div>
+        <div class="phrase"><span class="role">Staff:</span> Have a great day!</div>
+      </div>
+
+      <div class="scenario">
+        <h3>2. Check-in in person</h3>
+        <div class="phrase"><span class="role">Staff:</span> Good day! Welcome to Hotel XYZ. Do you have a reservation?</div>
+        <div class="phrase"><span class="role">Guest:</span> Yes, under Smith.</div>
+        <div class="phrase"><span class="role">Staff:</span> Great! Your room will be ready at 2 PM. Breakfast is served from 7 to 10 AM.</div>
+        <div class="phrase"><span class="role">Guest:</span> Thank you very much.</div>
+        <div class="phrase"><span class="role">Staff:</span> Here is your key. Please let us know if you need any help.</div>
+      </div>
+
+      <div class="scenario">
+        <h3>3. Guest complaint</h3>
+        <div class="phrase"><span class="role">Guest:</span> It's very noisy in the room.</div>
+        <div class="phrase"><span class="role">Staff:</span> Sorry for the inconvenience, I will try to fix it immediately.</div>
+        <div class="phrase"><span class="role">Staff:</span> Would you like to change the room?</div>
+        <div class="phrase"><span class="role">Guest:</span> Yes, that would be great.</div>
+        <div class="phrase"><span class="role">Staff:</span> Perfect, I'll arrange it.</div>
+      </div>
+
+      <div class="scenario">
+        <h3>4. Check-out</h3>
+        <div class="phrase"><span class="role">Staff:</span> Good day! Are you ready to check out?</div>
+        <div class="phrase"><span class="role">Guest:</span> Yes, thank you.</div>
+        <div class="phrase"><span class="role">Staff:</span> Please pay the bill at the reception.</div>
+        <div class="phrase"><span class="role">Guest:</span> Okay.</div>
+        <div class="phrase"><span class="role">Staff:</span> Thank you for your visit. We hope to see you again!</div>
+      </div>
+
+      <div class="scenario">
+        <h3>5. Common questions</h3>
+        <div class="phrase"><span class="role">Guest:</span> What is the Wi-Fi password?</div>
+        <div class="phrase"><span class="role">Staff:</span> The network name is HotelWiFi, the password is welcome123.</div>
+        <div class="phrase"><span class="role">Guest:</span> Can I order an extra towel?</div>
+        <div class="phrase"><span class="role">Staff:</span> Certainly, I'll bring it right away.</div>
+      </div>
     </div>
 
+    <!-- Deutsch -->
     <div id="de" class="conversation">
-      <h2>Szenarien (Deutsch)</h2>
-      <div class="phrase"><span class="label">1. Einchecken:</span> Guten Tag! Willkommen. Wie kann ich Ihnen helfen? <em>(Гутен таг! Вількоммен. Ві кан іх Інен хельфен?)</em></div>
-      <div class="phrase"><span class="label">2. Beschwerde:</span> Es tut uns leid! Wir kümmern uns sofort darum. <em>(Ес тут унс лайт! Віа кюммерн унс зофорт дарум.)</em></div>
-      <div class="phrase"><span class="label">3. Später Check-out:</span> Ja, bis 14 Uhr gegen Aufpreis möglich. <em>(Я, біс фірцайн Уа геген Ауфпрайс мьогліх)</em></div>
-      <div class="phrase"><span class="label">4. WLAN-Passwort:</span> Unser WLAN heißt "HotelWiFi". Passwort: welcome123 <em>(Унзер Велан хайст...)</em></div>
-      <div class="phrase"><span class="label">5. Zusätzliches Handtuch:</span> Natürlich, ich bringe es Ihnen. <em>(Натюрліх, іх брінге ес Інен)</em></div>
-      <div class="phrase"><span class="label">6. Verlorene Gegenstände:</span> Was haben Sie verloren? Wir schauen sofort nach. <em>(Вас хабен Зі ферлорен?)</em></div>
+      <h2>Gesprächsszenarien für Gäste (Deutsch)</h2>
+
+      <div class="scenario">
+        <h3>1. Telefonische Reservierung</h3>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Guten Tag, Hotel XYZ, wie kann ich Ihnen helfen?</div>
+        <div class="phrase"><span class="role">Gast:</span> Hallo, ich möchte ein Zimmer reservieren.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Natürlich! Für welche Daten planen Sie den Aufenthalt?</div>
+        <div class="phrase"><span class="role">Gast:</span> Vom 10. bis 15. August.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Bitte beachten Sie, dass nur das Frühstück im Preis enthalten ist.</div>
+        <div class="phrase"><span class="role">Gast:</span> Das ist in Ordnung, danke.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Bitte nennen Sie Ihren vollständigen Namen und Ihre Telefonnummer.</div>
+        <div class="phrase"><span class="role">Gast:</span> Max Mustermann, 0123 456789.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Danke. Ihre Reservierung ist bestätigt. Wir senden eine Bestätigung per E-Mail. Benötigen Sie Hilfe mit dem Transport?</div>
+        <div class="phrase"><span class="role">Gast:</span> Nein, danke.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Einen schönen Tag noch!</div>
+      </div>
+
+      <div class="scenario">
+        <h3>2. Persönlicher Check-in</h3>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Guten Tag! Willkommen im Hotel XYZ. Haben Sie eine Reservierung?</div>
+        <div class="phrase"><span class="role">Gast:</span> Ja, auf den Namen Mustermann.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Wunderbar! Ihr Zimmer ist ab 14 Uhr bereit. Frühstück wird von 7 bis 10 Uhr serviert.</div>
+        <div class="phrase"><span class="role">Gast:</span> Vielen Dank.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Hier ist Ihr Schlüssel. Bitte melden Sie sich, wenn Sie Hilfe benötigen.</div>
+      </div>
+
+      <div class="scenario">
+        <h3>3. Gästebeschwerde</h3>
+        <div class="phrase"><span class="role">Gast:</span> Es ist sehr laut im Zimmer.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Entschuldigung für die Unannehmlichkeiten, ich werde das sofort beheben.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Möchten Sie das Zimmer wechseln?</div>
+        <div class="phrase"><span class="role">Gast:</span> Ja, das wäre gut.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Super, ich kümmere mich darum.</div>
+      </div>
+
+      <div class="scenario">
+        <h3>4. Check-out</h3>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Guten Tag! Sind Sie bereit zum Auschecken?</div>
+        <div class="phrase"><span class="role">Gast:</span> Ja, danke.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Bitte bezahlen Sie die Rechnung an der Rezeption.</div>
+        <div class="phrase"><span class="role">Gast:</span> In Ordnung.</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Vielen Dank für Ihren Besuch. Wir hoffen, Sie bald wiederzusehen!</div>
+      </div>
+
+      <div class="scenario">
+        <h3>5. Häufige Fragen</h3>
+        <div class="phrase"><span class="role">Gast:</span> Wie lautet das WLAN-Passwort?</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Der Netzwerkname ist HotelWiFi, das Passwort lautet welcome123.</div>
+        <div class="phrase"><span class="role">Gast:</span> Kann ich ein zusätzliches Handtuch bestellen?</div>
+        <div class="phrase"><span class="role">Mitarbeiter:</span> Natürlich, ich bringe es sofort.</div>
+      </div>
     </div>
   </main>
 
   <script>
     function showConversation(lang) {
-      const conversations = document.querySelectorAll('.conversation');
-      conversations.forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.conversation').forEach(div => {
+        div.classList.remove('active');
+      });
       document.getElementById(lang).classList.add('active');
     }
+    // Show Ukrainian by default
+    showConversation('ua');
   </script>
 </body>
 </html>
