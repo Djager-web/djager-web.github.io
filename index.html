@@ -3,163 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Równania z animacją</title>
+  <title>Równania z animacją i grafiką</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <style>
     body {
-      background: #f0f4f8;
-      padding: 40px;
+      background: linear-gradient(135deg, #fff, #e0f7fa);
       font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      padding-bottom: 60px;
     }
     .equation-block {
       background: white;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      border-radius: 16px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 600px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
       cursor: pointer;
+      transition: transform 0.3s;
     }
     .equation-block:hover {
-      transform: scale(1.01);
+      transform: translateY(-5px);
     }
     .equation-step {
       display: none;
-      font-size: 22px;
-      margin: 12px 0;
+      font-size: 24px;
+      margin: 15px 0;
+      opacity: 0;
     }
     .equation-step.visible {
       display: block;
+      animation: fadeInUp 0.6s forwards;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .pythagoras-img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
     }
     .hint {
-      font-size: 14px;
-      color: #888;
+      font-size: 16px;
+      color: #555;
+      text-align: center;
+      margin-top: 10px;
     }
     .next-btn {
+      margin: 40px auto;
       display: block;
-      margin: 30px auto 0 auto;
     }
-    img.pythagoras-img {
-      max-width: 100%;
-      margin-top: 15px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+    .homework {
+      background: #ffffffbb;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      margin: 40px auto;
+      max-width: 700px;
+      color: #222;
+    }
+    .homework h3 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .homework ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .homework ul li {
+      margin: 8px 0;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="py-5">
+
     <div class="equation-block" onclick="nextStep(1)">
-      <h4>Równanie 1</h4>
-      <div class="equation-step visible animate__animated animate__fadeIn" id="step-1-1">X + 5 = 9</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-1-2">X = 9 - 5</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-1-3">X = 4</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-1-4">Sprawdzenie: 4 + 5 = 9 ✔</div>
-      <div class="hint">Kliknij na blok, aby zobaczyć kolejne kroki</div>
+      <h3>Równanie 1</h3>
+      <div class="equation-step visible" id="step-1-1">X + 5 = 9</div>
+      <div class="equation-step" id="step-1-2">X = 9 - 5</div>
+      <div class="equation-step" id="step-1-3">X = 4</div>
+      <div class="equation-step" id="step-1-4">Sprawdzenie: 4 + 5 = 9 ✔</div>
+      <div class="hint">Kliknij tutaj, by zobaczyć kolejne kroki</div>
     </div>
 
     <div class="equation-block" onclick="nextStep(2)">
-      <h4>Równanie 2</h4>
-      <div class="equation-step visible animate__animated animate__fadeIn" id="step-2-1">Y - 3 = 7</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-2-2">Y = 7 + 3</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-2-3">Y = 10</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-2-4">Sprawdzenie: 10 - 3 = 7 ✔</div>
-      <div class="hint">Kliknij na blok, aby zobaczyć kolejne kroki</div>
+      <h3>Równanie 2</h3>
+      <div class="equation-step visible" id="step-2-1">Y - 3 = 7</div>
+      <div class="equation-step" id="step-2-2">Y = 7 + 3</div>
+      <div class="equation-step" id="step-2-3">Y = 10</div>
+      <div class="equation-step" id="step-2-4">Sprawdzenie: 10 - 3 = 7 ✔</div>
+      <div class="hint">Kliknij tutaj, by zobaczyć kolejne kroki</div>
     </div>
 
     <div class="equation-block" onclick="nextStep(3)">
-      <h4>Równanie 3</h4>
-      <div class="equation-step visible animate__animated animate__fadeIn" id="step-3-1">A : 2 = 6</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-3-2">A = 6 × 2</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-3-3">A = 12</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-3-4">Sprawdzenie: 12 : 2 = 6 ✔</div>
-      <div class="hint">Kliknij na blok, aby zobaczyć kolejne kroki</div>
+      <h3>Równanie 3</h3>
+      <div class="equation-step visible" id="step-3-1">A ÷ 2 = 6</div>
+      <div class="equation-step" id="step-3-2">A = 6 × 2</div>
+      <div class="equation-step" id="step-3-3">A = 12</div>
+      <div class="equation-step" id="step-3-4">Sprawdzenie: 12 ÷ 2 = 6 ✔</div>
+      <div class="hint">Kliknij tutaj, by zobaczyć kolejne kroki</div>
     </div>
 
     <div class="equation-block" onclick="nextStep(4)">
-      <h4>Twierdzenie Pitagorasa</h4>
-      <div class="equation-step visible animate__animated animate__fadeIn" id="step-4-1">a² + b² = c²</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-4-2">3² + 4² = c²</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-4-3">9 + 16 = c²</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-4-4">25 = c²</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-4-5">c = √25</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-4-6">c = 5</div>
-      <div class="equation-step animate__animated animate__fadeIn" id="step-4-7">Sprawdzenie: 3² + 4² = 5² → 9 + 16 = 25 ✔</div>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pythagorean.svg/400px-Pythagorean.svg.png" alt="Trójkąt prostokątny" class="pythagoras-img">
-      <div class="hint">Kliknij na blok, aby zobaczyć kolejne kroki</div>
+      <h3>Twierdzenie Pitagorasa</h3>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pythagorean.svg/400px-Pythagorean.svg.png" alt="Trójkąt prostokątny" class="pythagoras-img" />
+      <div class="equation-step visible" id="step-4-1">a² + b² = c²</div>
+      <div class="equation-step" id="step-4-2">3² + 4² = c²</div>
+      <div class="equation-step" id="step-4-3">9 + 16 = c²</div>
+      <div class="equation-step" id="step-4-4">25 = c²</div>
+      <div class="equation-step" id="step-4-5">c = √25</div>
+      <div class="equation-step" id="step-4-6">c = 5</div>
+      <div class="equation-step" id="step-4-7">Sprawdzenie: 3² + 4² = 5² → 9 + 16 = 25 ✔</div>
+      <div class="hint">Kliknij tutaj, by zobaczyć kolejne kroki</div>
     </div>
 
-    <button class="btn btn-success next-btn" onclick="nextAllSteps()">➤ Następny krok we wszystkich blokach</button>
+    <button class="btn btn-primary next-btn" onclick="nextAllSteps()">➤ Kolejny krok we wszystkich blokach</button>
 
-    <!-- Zadanie domowe -->
-    <div class="mt-5 pt-4">
-      <h3 class="mb-4">📚 Zadanie domowe</h3>
-
-      <div class="mb-4">
-        <h5>➊ Równanie typu <code>X + coś = liczba</code></h5>
-        <ul>
-          <li>X + 7 = 12</li>
-          <li>X + 3 = 15</li>
-          <li>X + 9 = 20</li>
-        </ul>
-        <p><strong>Twoje zadanie:</strong> Rozwiąż równania i sprawdź wynik podstawiając X.</p>
-      </div>
-
-      <div class="mb-4">
-        <h5>➋ Równanie typu <code>Y - coś = liczba</code></h5>
-        <ul>
-          <li>Y - 4 = 6</li>
-          <li>Y - 8 = 2</li>
-          <li>Y - 10 = 5</li>
-        </ul>
-        <p><strong>Twoje zadanie:</strong> Znajdź Y, sprawdź, czy wynik pasuje.</p>
-      </div>
-
-      <div class="mb-4">
-        <h5>➌ Równanie typu <code>A : liczba = coś</code></h5>
-        <ul>
-          <li>A : 3 = 5</li>
-          <li>A : 6 = 2</li>
-          <li>A : 4 = 8</li>
-        </ul>
-        <p><strong>Twoje zadanie:</strong> Oblicz wartość A i sprawdź rozwiązanie.</p>
-      </div>
-
-      <div class="mb-4">
-        <h5>➍ Twierdzenie Pitagorasa</h5>
-        <ul>
-          <li>a = 6, b = 8 → Oblicz c</li>
-          <li>a = 5, b = 12 → Oblicz c</li>
-          <li>c = 13, a = 5 → Oblicz b</li>
-        </ul>
-        <p><strong>Twoje zadanie:</strong> Użyj wzoru <code>a² + b² = c²</code> i znajdź brakującą długość boku.</p>
-      </div>
+    <div class="homework">
+      <h3>✏️ Zadania domowe</h3>
+      <ul>
+        <li><strong>X + ... = ...</strong> – rozwiąż 3 przykłady samodzielnie.</li>
+        <li><strong>Y – ... = ...</strong> – znajdź Y w trzech nowych przykładach.</li>
+        <li><strong>A ÷ ... = ...</strong> – podstaw, policz i sprawdź.</li>
+        <li><strong>Pitagoras</strong> – oblicz nieznany bok w trzech trójkątach.</li>
+      </ul>
     </div>
   </div>
 
   <script>
-    const steps = {
-      1: 1,
-      2: 1,
-      3: 1,
-      4: 1
-    };
+    const stepState = {1: 1, 2: 1, 3: 1, 4: 1};
 
     function nextStep(block) {
-      const step = steps[block] + 1;
-      const el = document.getElementById(`step-${block}-${step}`);
+      const next = stepState[block] + 1;
+      const el = document.getElementById(`step-${block}-${next}`);
       if (el) {
         el.classList.add('visible');
-        steps[block]++;
+        stepState[block] = next;
       }
     }
 
     function nextAllSteps() {
-      nextStep(1);
-      nextStep(2);
-      nextStep(3);
-      nextStep(4);
+      [1,2,3,4].forEach(b => nextStep(b));
     }
   </script>
 </body>
